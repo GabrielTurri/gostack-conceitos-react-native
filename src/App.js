@@ -30,14 +30,12 @@ export default function App() {
       if (repository.id === id) {
         return likedRepository;
       } else{
-        repository;
+        return repository;
       }
     
-      setRepositories(repositoriesUpdated);
-    })
-
-    const repository = response.data;
-    setRepositories({...repositories, repository});
+      
+    });
+    setRepositories(repositoriesUpdated);
   }
 
 
@@ -53,6 +51,7 @@ export default function App() {
             <>
               <View style={styles.repositoryContainer}>
                 <Text style={styles.repository}>{repository.title}</Text>
+
                 <View style={styles.techsContainer}>
                   {repository.techs.map(tech => (
                     <Text key={tech} style={styles.tech}>
